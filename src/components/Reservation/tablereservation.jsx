@@ -26,7 +26,7 @@ const TableReservation = () => {
 
   return (
     <div className="w-full py-16 relative">
-      <div className="max-w-full mx-auto px-4 bg-white rounded-lg shadow-[0_4px_20px_rgba(233,114,132,0.3)] p-8 relative">
+      <div className="max-w-full mx-auto px-4 bg-white rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.3)] p-8 relative">
         <img 
           src={image1} 
           alt="Decorative left" 
@@ -51,7 +51,7 @@ const TableReservation = () => {
           <motion.div className="mt-8">
             <Link to="/reservation">
               <motion.button
-                className="px-8 py-4 bg-[#ffffff] text-lg font-semibold text-dark rounded-full hover:bg-[#c96476] transition-colors duration-300 shadow-lg"
+                className="px-8 py-4 bg-[#000000] text-lg font-semibold text-white rounded-full hover:bg-[#333333] transition-colors duration-300 shadow-lg"
                 variants={buttonVariants}
                 whileHover="hover"
                 whileTap="tap"

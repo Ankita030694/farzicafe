@@ -247,7 +247,7 @@ const ReservationForm = () => {
       className="flex items-center justify-center w-full py-8 h-auto px-2"
     >
       <div
-        className="w-full max-w-5xl rounded-lg shadow-lg p-8 mt-24 border-[#758b6b] border-2"
+        className="w-full max-w-5xl rounded-lg shadow-lg p-8 mt-24 border-black border-2"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}
       >
         <div className="mb-8 text-center">
@@ -270,7 +270,7 @@ const ReservationForm = () => {
                   handleInputChange("name", value);
                 }
               }}
-              className={`w-full px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-orange-300 ${
+              className={`w-full px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-black ${
                 errors.name ? "border-red-500 border" : "border-gray-100"
               }`}
             />
@@ -286,7 +286,7 @@ const ReservationForm = () => {
               placeholder="Email Address"
               value={formData.email}
               onChange={(e) => handleInputChange("email", e.target.value)}
-              className={`w-full px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-orange-300 ${
+              className={`w-full px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-black ${
                 errors.email ? "border-red-500 border" : "border-gray-300"
               }`}
             />
@@ -304,15 +304,8 @@ const ReservationForm = () => {
                   onChange={(e) => {
                     const selectedCode = e.target.value;
                     handleInputChange("countryCode", selectedCode);
-                    // Ensure phone number starts with selected country code
-                    // if (!formData.phone.startsWith(selectedCode)) {
-                    //   handleInputChange(
-                    //     "phone",
-                    //     selectedCode + formData.phone.replace(/^\+\d+/, "")
-                    //   );
-                    // }
                   }}
-                  className="w-full px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-orange-300 border-gray-300"
+                  className="w-full px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-black border-gray-300"
                 >
                   <option value="+91 (India)">+91 India</option>
                   <option value="+1 (USA)">+1 USA</option>
@@ -437,7 +430,7 @@ const ReservationForm = () => {
                     handleInputChange("phone", numericValue);
                   }}
                   onBlur={validatePhone}
-                  className={`w-full px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-orange-300 ${
+                  className={`w-full px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-black ${
                     errors.phone ? "border-red-500 border" : "border-gray-300"
                   }`}
                   minLength={10}
@@ -460,7 +453,7 @@ const ReservationForm = () => {
                   setTimeSlots(outlet.timeSlots);
                   handleInputChange("timeSlot", "");
                 }}
-                className={`w-full px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-orange-300 ${
+                className={`w-full px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-black ${
                   errors.outlet ? "border-red-500 border" : "border-gray-300"
                 }`}
               >
@@ -481,7 +474,7 @@ const ReservationForm = () => {
                 <button
                   type="button"
                   onClick={decrement}
-                  className="px-2 py-2 bg-gray-200 rounded-md focus:outline-none"
+                  className="px-2 py-2 bg-black text-white rounded-md focus:outline-none"
                 >
                   -
                 </button>
@@ -489,7 +482,7 @@ const ReservationForm = () => {
                   type="number"
                   value={formData.persons}
                   onChange={handleCounter}
-                  className={`w-full px-4 py-2 border-gray-300 rounded-md text-center outline-none focus:ring-2 focus:ring-orange-300 ${
+                  className={`w-full px-4 py-2 border-gray-300 rounded-md text-center outline-none focus:ring-2 focus:ring-black ${
                     errors.persons ? "border-red-500 pl-4" : ""
                   }`}
                   placeholder="Pax"
@@ -497,7 +490,7 @@ const ReservationForm = () => {
                 <button
                   type="button"
                   onClick={increment}
-                  className="px-2 py-2 bg-gray-200 rounded-md focus:outline-none"
+                  className="px-2 py-2 bg-black text-white rounded-md focus:outline-none"
                 >
                   +
                 </button>
@@ -516,7 +509,7 @@ const ReservationForm = () => {
               value={formData.date}
               min={today}
               onChange={(e) => handleInputChange("date", e.target.value)}
-              className={`w-full px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-orange-300 ${
+              className={`w-full px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-black ${
                 errors.date ? "border-red-500 border" : "border-gray-300"
               }`}
             />
@@ -533,7 +526,7 @@ const ReservationForm = () => {
                 onClick={() => filterTimeSlots("lunch")}
                 className={`p-2 rounded-md transition-colors duration-200 md:w-48 ${
                   formData.timing === "lunch"
-                    ? "bg-[#758b6b] font-semibold text-white"
+                    ? "bg-black font-semibold text-white"
                     : "bg-white hover:bg-gray-200"
                 }`}
               >
@@ -547,7 +540,7 @@ const ReservationForm = () => {
                 onClick={() => filterTimeSlots("dinner")}
                 className={`p-2 rounded-md transition-colors duration-200 md:w-48 ${
                   formData.timing === "dinner"
-                    ? "bg-[#758b6b] font-semibold text-white"
+                    ? "bg-black font-semibold text-white"
                     : "bg-white hover:bg-gray-200"
                 }`}
               >
@@ -570,7 +563,7 @@ const ReservationForm = () => {
                     onClick={() => handleInputChange("timeSlot", slot)}
                     className={`p-2 rounded-md transition-colors duration-200 ${
                       formData.timeSlot === slot
-                        ? "bg-[#758b6b] font-semibold text-white"
+                        ? "bg-black font-semibold text-white"
                         : "bg-white hover:bg-gray-200"
                     }`}
                   >
@@ -588,7 +581,7 @@ const ReservationForm = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#758b6b] text-white hover:bg-white font-semibold hover:text-[#758b6b] py-3 rounded-lg transition-colors duration-200 disabled:bg-orange-300"
+            className="w-full bg-[#000000] text-white hover:bg-white font-semibold hover:text-[#000000] py-3 rounded-lg transition-colors duration-200 disabled:bg-gray-300"
           >
             {loading ? "Please Wait .." : "Submit"}
           </button>

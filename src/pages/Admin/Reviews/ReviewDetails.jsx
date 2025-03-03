@@ -37,9 +37,9 @@ const ReviewDetails = () => {
       <AdminNavbar />
       <main className="w-screen h-screen bg-[#ffffff] px-6 pb-10 pt-52">
         <div className="container mx-auto">
-          <div className="bg-[#758b6b] shadow-md rounded-lg overflow-hidden">
-            <table className="min-w-full bg-[#758b6b]">
-              <thead className="bg-gray-300 text-gray-600 uppercase text-sm leading-normal border-b">
+          <div className="bg-[#000000] shadow-md rounded-lg overflow-hidden">
+            <table className="min-w-full bg-[#000000]">
+              <thead className="bg-[#000000] text-[#ffffff] uppercase text-sm leading-normal border-b">
                 <tr>
                   <th className="py-3 px-6 text-left">Name</th>
                   <th className="py-3 px-6 text-left">Email</th>
@@ -51,12 +51,12 @@ const ReviewDetails = () => {
                   <th className="py-3 px-6 text-left">Created At</th>
                 </tr>
               </thead>
-              <tbody className="text-gray-700 text-sm font-light bg-[#ffffff]">
+              <tbody className="text-[#000000] text-sm font-light bg-[#ffffff]">
                 {reviews.length > 0 ? (
                   reviews.map((review) => (
                     <tr
                       key={review.id}
-                      className="border-b border-gray-200 hover:bg-brown hover:text-[#CFA177]"
+                      className="border-b border-white hover:bg-[#000000] hover:text-[#ffffff]"
                     >
                       <td className="py-3 px-6 text-left whitespace-nowrap">
                         {review.name || 'N/A'}
@@ -90,7 +90,7 @@ const ReviewDetails = () => {
                   <tr>
                     <td
                       colSpan="8"
-                      className="py-3 px-6 text-center text-gray-500"
+                      className="py-3 px-6 text-center text-white"
                     >
                       No reviews found.
                     </td>

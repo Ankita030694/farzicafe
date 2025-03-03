@@ -6,7 +6,7 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [message, setMessage] = useState("");
-    const navi =useNavigate()
+    const navi = useNavigate()
     const handleLogin = async () => {
         
             await FirebaseAuthService.login(email, password).then((e) => {
@@ -32,31 +32,30 @@ const Login = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-brown-100">
-            <div className="bg-brown-200 shadow-lg rounded-lg p-8 w-full max-w-md">
-                <h2 className="text-2xl font-bold text-brown-800 text-center mb-6">Login</h2>
+        <div className="min-h-screen flex items-center justify-center bg-white">
+            <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md border-2 border-black">
+                <h2 className="text-2xl font-bold text-black text-center mb-6">Login</h2>
                 <input
                     type="email"
                     placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full p-3 mb-4 border border-brown-300 rounded focus:outline-none focus:ring-2 focus:ring-brown-500"
+                    className="w-full p-3 mb-4 border border-black rounded focus:outline-none focus:ring-2 focus:ring-black"
                 />
                 <input
                     type="password"
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full p-3 mb-4 border border-brown-300 rounded focus:outline-none focus:ring-2 focus:ring-brown-500"
+                    className="w-full p-3 mb-4 border border-black rounded focus:outline-none focus:ring-2 focus:ring-black"
                 />
                 <button
                     onClick={handleLogin}
-                    className="w-full bg-brown text-white py-3 rounded hover:bg-brown transition"
+                    className="w-full bg-[#000000] text-white py-3 rounded hover:bg-white hover:text-[#000000] hover:border-2 hover:border-black transition duration-200"
                 >
                     Login
                 </button>
-<p>{message}</p>
-
+                <p className="text-red-500 mt-4 text-center">{message}</p>
             </div>
         </div>
     );

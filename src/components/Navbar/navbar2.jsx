@@ -45,7 +45,7 @@ const NavbarTwo = () => {
     <div className="relative">
       {/* Main Navbar */}
       <nav
-        className={`fixed top-0 h-21 left-0 right-0 z-[999] transition-all duration-300 bg-white`}
+        className={`fixed top-0 h-21 left-0 right-0 z-[999] transition-all duration-300 bg-[#000000]`}
       >
         <div className="max-w-7xl mx-auto p-8">
           <div className="flex items-center justify-between">
@@ -57,8 +57,8 @@ const NavbarTwo = () => {
                   href={item.path}
                   className={`text-md font-medium transition-colors duration-300 py-2 px-4 rounded-lg ${
                     isScrolled
-                      ? "text-dark hover:text-[#000000]"
-                      : "text-dark font-medium hover:text-[#000000]"
+                      ? "text-white hover:text-[#000000]"
+                      : "text-white font-medium hover:text-[#000000]"
                   }`}
                 >
                   {item.name}
@@ -70,8 +70,8 @@ const NavbarTwo = () => {
                   onClick={toggleMenu}
                   className={`text-md font-medium transition-colors duration-300 py-2 px-4 rounded-lg ${
                     isScrolled
-                      ? "text-dark hover:text-[#000000]"
-                      : "text-dark font-medium hover:text-[#000000]"
+                      ? "text-white hover:text-[#000000]"
+                      : "text-white font-medium hover:text-[#000000]"
                   }`}
                 >
                   MENU
@@ -104,7 +104,7 @@ const NavbarTwo = () => {
             <div className="hidden md:flex items-center space-x-4">
               <a
                 href="tel:+918130933899"
-                className="px-4 py-2 rounded-lg transition-colors duration-300 border-2 border-[#000000] text-[#000000] hover:bg-[#000000] hover:text-[#ffffff]"
+                className="px-4 py-2 rounded-lg transition-colors duration-300 border-2 border-[#ffffff] text-[#ffffff] hover:bg-[#ffffff] hover:text-[#000000]"
               >
                 Call Us
               </a>

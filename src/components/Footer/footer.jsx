@@ -6,9 +6,9 @@ import {
   FaInstagram,
   FaTwitter,
 } from "react-icons/fa"; // Social icons
-import logo from "../../assets/logos/logo.png";
 import blackLogo from "../../assets/logos/8.png"
 import { useNavigate, Link } from "react-router-dom";
+import logo from "../../assets/logos/logo(1).svg"
 
 const navi = useNavigate;
 const bananaAnimation = {
@@ -43,7 +43,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#758b6b] text-white pb-12">
+    <footer className="bg-[#000000] text-white pb-12">
       <div className="container mx-auto px-5">
         <div className="flex flex-wrap justify-around">
           {/* Logo and Description */}
@@ -56,7 +56,7 @@ const Footer = () => {
           >
             <a href="/">
               <img
-                src={blackLogo}
+                src={logo}
                 alt="Bo-Tai Logo"
                 className="h-16 mx-auto md:mx-0 m-5"
               />

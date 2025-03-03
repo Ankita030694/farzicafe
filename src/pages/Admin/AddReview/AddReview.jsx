@@ -56,13 +56,13 @@ const AddReview = () => {
         className="max-w-md mx-auto p-6 bg-white shadow-lg rounded-lg"
         style={{ marginTop: "100px" }}
       >
-        <h2 className="text-xl font-semibold mb-4">Add Your Review</h2>
+        <h2 className="text-xl font-semibold mb-4 text-[#000000]">Add Your Review</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           <input
             {...register("name", { required: true })}
             type="text"
             placeholder="Name"
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border border-[#000000] rounded"
             required
           />
 
@@ -70,18 +70,18 @@ const AddReview = () => {
             <input
               {...register("dob")}
               type="date"
-              className="w-full p-2 border rounded"
+              className="w-full p-2 border border-[#000000] rounded"
             />
-            <small>Date Of Birth</small>
+            <small className="text-[#000000]">Date Of Birth</small>
           </div>
 
           <div className="w-full flex flex-col">
             <input
               {...register("anniversary")}
               type="date"
-              className="w-full p-2 border rounded"
+              className="w-full p-2 border border-[#000000] rounded"
             />
-            <small>Date Of Anniversary</small>
+            <small className="text-[#000000]">Date Of Anniversary</small>
           </div>
 
           <input
@@ -91,40 +91,40 @@ const AddReview = () => {
             })}
             type="tel"
             placeholder="Mobile Number"
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border border-[#000000] rounded"
           />
 
           <input
             {...register("email", { required: true })}
             type="email"
             placeholder="Email"
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border border-[#000000] rounded"
             required
           />
 
           <textarea
             {...register("comment")}
             placeholder="Valuable Comment"
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border border-[#000000] rounded"
           ></textarea>
 
           {/* Star Rating Component */}
           <div className="flex items-center gap-2">
-            <span className="text-gray-700">Rating:</span>
+            <span className="text-[#000000]">Rating:</span>
             <Rating
               count={5}
               size={30}
               value={rating}
               onChange={(newRating) => setRating(newRating)}
-              activeColor="#ffd700"
+              activeColor="#000000"
             />
           </div>
 
           <button
             type="submit"
             disabled={loading}
-            className={`w-full text-white bg-[#e07e90] p-2 rounded ${
-              loading ? "bg-gray-400" : "bg-blue-500 hover:bg-blue-600"
+            className={`w-full text-white bg-[#000000] p-2 rounded ${
+              loading ? "bg-gray-400" : "hover:bg-white hover:text-[#000000] border border-[#000000]"
             }`}
           >
             {loading ? "Submitting..." : "Submit"}

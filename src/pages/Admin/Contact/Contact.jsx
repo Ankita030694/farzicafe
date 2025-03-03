@@ -65,16 +65,16 @@ function Contact() {
                         <input
                             type="text"
                             placeholder="Search by Name or Email"
-                            className="w-1/2 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            className="w-1/2 px-4 py-2 border border-[#000000] rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#000000]"
                             value={search}
                             onChange={e => setSearch(e.target.value)}
                         />
                     </div>
 
                     {/* Table */}
-                    <div className="bg-[#758b6b] shadow-md rounded-lg overflow-hidden">
-                        <table className="min-w-full bg-[#758b6b]">
-                            <thead className="bg-gray-300 text-gray-600 uppercase text-sm leading-normal border-b ">
+                    <div className="bg-[#000000] shadow-md rounded-lg overflow-hidden">
+                        <table className="min-w-full bg-[#000000]">
+                            <thead className="bg-[#000000] text-[#ffffff] uppercase text-sm leading-normal border-b">
                                 <tr>
                                     <th
                                         className="py-3 px-6 text-left cursor-pointer"
@@ -103,12 +103,12 @@ function Contact() {
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody className="text-gray-700 text-sm font-light bg-[#ffffff]">
+                            <tbody className="text-[#000000] text-sm font-light bg-[#ffffff]">
                                 {filteredQueries.length > 0 ? (
                                     filteredQueries.map((query) => (
                                         <tr
                                             key={query.id}
-                                            className="border-b border-gray-200 hover:bg-brown hover:text-[#CFA177]"
+                                            className="border-b border-[#000000] hover:bg-[#000000] hover:text-[#ffffff]"
                                         >
                                             <td className="py-3 px-6 text-left whitespace-nowrap">
                                                 {query.fullName}
@@ -129,7 +129,7 @@ function Contact() {
                                     <tr>
                                         <td
                                             colSpan="5"
-                                            className="py-3 px-6 text-center text-gray-500"
+                                            className="py-3 px-6 text-center text-[#000000]"
                                         >
                                             No queries found.
                                         </td>
@@ -140,7 +140,7 @@ function Contact() {
                                 <tr>
                                     <td
                                         colSpan="5"
-                                        className="py-3 px-6 text-right text-gray-500"
+                                        className="py-3 px-6 text-right text-[#000000]"
                                     >
                                         Total queries: {contactQueries.length}
                                     </td>

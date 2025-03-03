@@ -59,7 +59,7 @@ const ContactUs = () => {
   return (
     <>
       <NavbarTwo/>
-      <div className="min-h-screen bg-white py-16 px-6 sm:px-8 lg:px-12 ">
+      <div className="min-h-screen bg-white py-16 px-6 sm:px-8 lg:px-12">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 mt-20">
           {/* Left Section */}
           <motion.div
@@ -68,20 +68,20 @@ const ContactUs = () => {
             transition={{ duration: 0.6 }}
             className="flex flex-col justify-center"
           >
-            <div className='shadow-lg bg-white p-8 rounded-lg border-2 border-[#000000]'>
-              <h1 className="text-4xl font-bold text-[#000000] mb-6">Contact Us</h1>
-              <p className="text-gray-700 mb-6">
+            <div className='shadow-lg bg-white p-8 rounded-lg border-2 border-black'>
+              <h1 className="text-4xl font-bold text-black mb-6">Contact Us</h1>
+              <p className="text-gray-900 mb-6">
               ward no 1, Kharsra No 1501, 1st Floor, Kalka Das Marg, Mehrauli, New Delhi, Delhi 110030
               </p>
               <div className="space-y-4">
-                <p className='text-gray-700'>For franchisee enquiries contact Business Development and Franchising:</p>
+                <p className='text-gray-900'>For franchisee enquiries contact Business Development and Franchising:</p>
                 <div className="flex items-center space-x-3">
-                  <span className="text-[#e07e90]">📧</span>
-                  <span className="text-gray-700">franchising@massiverestaurants.com</span>
+                  <span className="text-black">📧</span>
+                  <span className="text-gray-900">franchising@massiverestaurants.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <span className="text-[#4A3427]">📞</span>
-                  <span className="text-gray-700">+91 81309 33899</span>
+                  <span className="text-black">📞</span>
+                  <span className="text-gray-900">+91 81309 33899</span>
                 </div>
               </div>
             </div>
@@ -92,9 +92,9 @@ const ContactUs = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-white rounded-lg p-8 shadow-lg border-2 border-[#000000]"
+            className="bg-white rounded-lg p-8 shadow-lg border-2 border-black"
           >
-            <h2 className="text-3xl font-bold text-[#000000] mb-6">Get in Touch</h2>
+            <h2 className="text-3xl font-bold text-black mb-6">Get in Touch</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-1">
                 <input
@@ -103,7 +103,7 @@ const ContactUs = () => {
                   value={formData.fullName}
                   onChange={handleChange}
                   placeholder="Full Name"
-                  className={`w-full p-4 rounded-md border ${errors.fullName ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#4A3427]`}
+                  className={`w-full p-4 rounded-md border ${errors.fullName ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-black`}
                 />
                 {errors.fullName && <p className="text-red-500 text-sm">{errors.fullName}</p>}
               </div>
@@ -115,7 +115,7 @@ const ContactUs = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Email Address"
-                  className={`w-full p-4 rounded-md border ${errors.email ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#4A3427]`}
+                  className={`w-full p-4 rounded-md border ${errors.email ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-black`}
                 />
                 {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
               </div>
@@ -127,7 +127,7 @@ const ContactUs = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="Phone Number"
-                  className={`w-full p-4 rounded-md border ${errors.phone ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#4A3427]`}
+                  className={`w-full p-4 rounded-md border ${errors.phone ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-black`}
                 />
                 {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
               </div>
@@ -138,13 +138,13 @@ const ContactUs = () => {
                 onChange={handleChange}
                 placeholder="Message"
                 rows="5"
-                className="w-full p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#4A3427]"
+                className="w-full p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black"
               />
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full p-4 rounded-md bg-[#758b6b] text-white font-semibold ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-white hover:text-[#000000] hover: border-2 hover:border-[#758b6b]'} transition duration-200`}
+                className={`w-full p-4 rounded-md bg-[#000000] text-white font-semibold ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-white hover:text-[#000000] hover:border-2 hover:border-[#000000]'} transition duration-200`}
               >
                 {isSubmitting ? 'Submitting...' : 'Submit'}
               </button>

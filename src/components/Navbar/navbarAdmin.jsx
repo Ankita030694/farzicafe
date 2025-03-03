@@ -34,12 +34,11 @@ const AdminNavbar = () => {
     <div className="relative">
       {/* Main AdminNavbar */}
       <nav className={`fixed h-28 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-brown shadow-md' : 'bg-[#758b6b]'
+        isScrolled ? 'bg-white shadow-md' : 'bg-[#000000]'
       }`}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between">
           
-
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8 p-8">
               {navItems.map((item) => (
@@ -47,15 +46,15 @@ const AdminNavbar = () => {
                   key={item.name}
                   href={item.path}
                   className={`text-sm font-medium transition-colors duration-300 ${
-                    isScrolled ? 'text-orange-100 hover:text-gray-600' : 'text-brown-100 font-medium hover:text-orange-100'
+                    isScrolled ? 'text-[#000000] hover:text-gray-600' : 'text-white font-medium hover:text-gray-300'
                   }`}
                 >
                   {item.name}
                 </a>
               ))}
             </div>
-  {/* Logo */}
-  <div className="flex">
+            {/* Logo */}
+            <div className="flex">
               <img
                 src={logo}
                 alt="Logo"
@@ -64,10 +63,10 @@ const AdminNavbar = () => {
             </div>
             {/* Action Buttons */}
             <div className="hidden md:flex items-center space-x-4">
-            <Link to={'/admin/add/outlet'} className="px-4 py-2 bg-orange-200 text-brown-200 font-medium rounded-lg hover:bg-blue-700">
+              <Link to={'/admin/add/outlet'} className="px-4 py-2 bg-[#000000] text-white font-medium rounded-lg hover:bg-white hover:text-[#000000] border border-[#000000]">
                 Outlets
               </Link>
-              <button onClick={logOut} className="px-4 py-2 bg-orange-200 text-brown-200 font-medium rounded-lg hover:bg-blue-700">
+              <button onClick={logOut} className="px-4 py-2 bg-[#000000] text-white font-medium rounded-lg hover:bg-white hover:text-[#000000] border border-[#000000]">
                 Logout
               </button>
             </div>
@@ -100,17 +99,16 @@ const AdminNavbar = () => {
               <a
                 key={item.name}
                 href={item.path}
-                className="block py-3 text-base font-medium text-gray-900 hover:bg-gray-50 rounded-md"
+                className="block py-3 text-base font-medium text-[#000000] hover:bg-gray-50 rounded-md"
                 onClick={toggleSidebar}
               >
                 {item.name}
               </a>
             ))}
             <div className="mt-6 space-y-4">
-              <button onClick={logOut} className="w-full px-4 py-2 bg-gray-100 text-gray-900 rounded-lg">
+              <button onClick={logOut} className="w-full px-4 py-2 bg-[#000000] text-white rounded-lg hover:bg-white hover:text-[#000000] border border-[#000000]">
                 Logout
               </button>
-            
             </div>
           </div>
         </div>

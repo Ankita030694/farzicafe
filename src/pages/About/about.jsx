@@ -12,7 +12,7 @@ const About = () => {
   return (
     <div className="relative">
       <NavbarTwo />  
-      <div className="w-full bg-[#fae6e7] mt-5">
+      <div className="w-full bg-[#000000] mt-5 grayscale">
         <div className="">
           <div className="relative">
             <div className="aspect-[16/9] w-full overflow-hidden rounded-2xl">
@@ -28,7 +28,7 @@ const About = () => {
             </div>
             
             {/* <div className="absolute bottom-8 left-0 right-0 flex justify-center">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#e07e90] tracking-wider">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#ffffff] tracking-wider">
                 ABOUT US
               </h1>
             </div> */}
