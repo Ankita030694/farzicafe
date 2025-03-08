@@ -3,19 +3,19 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBZIjQQInUDwGlBTuWYhgbLTzFwG20tU3A",
+  apiKey: "AIzaSyCV3ehB2MY63KxM59xrSYoJpGkYXlzeyhM",
 
-  authDomain: "swan-a3516.firebaseapp.com",
+  authDomain: "farzicafee.firebaseapp.com",
 
-  projectId: "swan-a3516",
+  projectId: "farzicafee",
 
-  storageBucket: "swan-a3516.firebasestorage.app",
+  storageBucket: "farzicafee.firebasestorage.app",
 
-  messagingSenderId: "640118984687",
+  messagingSenderId: "555533115711",
 
-  appId: "1:640118984687:web:0045b4ab0eb7b1672b701a",
+  appId: "1:555533115711:web:881e82064716993806738a",
 
-  measurementId: "G-PPXQCJSWCS",
+  measurementId: "G-MK8D8WP3G2"
 };
 
 // Initialize Firebase
