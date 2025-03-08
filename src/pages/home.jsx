@@ -8,19 +8,17 @@ import { AnimatePresence, motion } from "framer-motion";
 import ReservationBanner from "../components/Reservation/tablereservation";
 import BoTaiGallery from "../components/OurStory/gallery";
 import Lottie from "lottie-react";
-import loadingAnimation from "../assets/latestloader.mp4";
+import loadingAnimation from "../assets/introfarzi.mp4";
 import NavbarTwo from "../components/Navbar/navbar2";
 const LoadingScreen = () => {
   return (
     <motion.div 
-      className="fixed inset-0 flex items-center justify-center z-40 bg-cover bg-center"
+      className="fixed inset-0 flex items-center justify-center z-40 bg-contain bg-center"
       initial={{ opacity: 1 }}
       exit={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
     >
-      <div className="w-64 h-64">
-        <video src={loadingAnimation} autoPlay loop muted />
-      </div>
+        <video src={loadingAnimation} autoPlay loop muted className="w-64 h-64 object-cover" />
     </motion.div>
   );
 };

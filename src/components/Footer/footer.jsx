@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa"; // Social icons
 import blackLogo from "../../assets/logos/8.png"
 import { useNavigate, Link } from "react-router-dom";
-import logo from "../../assets/logos/logo(1).svg"
+import logo from "../../assets/white3.png"
 
 const navi = useNavigate;
 const bananaAnimation = {
@@ -58,7 +58,7 @@ const Footer = () => {
               <img
                 src={logo}
                 alt="Bo-Tai Logo"
-                className="h-16 mx-auto md:mx-0 m-5"
+                className="h-24 -mx-5"
               />
             </a>
             <p className=" mb-8">

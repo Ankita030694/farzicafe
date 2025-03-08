@@ -7,18 +7,19 @@ import NavbarTwo from '../../components/Navbar/navbar2';
 import LogoSlider from '../../components/LogoSlider/logoslider';
 import Navbar from '../../components/Navbar/navbar';
 import aboutheader from '../../assets/Swan2147.jpg';
+import aboutheader2 from '../../assets/aboutbanner.jpeg';
 
 const About = () => {
   return (
     <div className="relative">
       <NavbarTwo />  
-      <div className="w-full bg-[#000000] mt-5 grayscale">
+      <div className="w-full bg-[#000000]">
         <div className="">
           <div className="relative">
             <div className="aspect-[16/9] w-full overflow-hidden rounded-2xl">
               <div className="relative h-full w-full">
                 <img
-                  src={aboutheader}
+                  src={aboutheader2}
                   alt="Thai dish presentation"
                   className="h-full w-full object-cover"
                   loading="eager"

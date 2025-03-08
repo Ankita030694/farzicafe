@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "../../assets/logos/8.png";
+import logo from "../../assets/logos/roundlogo.svg";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaCross, FaHamburger } from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
@@ -45,7 +45,7 @@ const NavbarTwo = () => {
     <div className="relative">
       {/* Main Navbar */}
       <nav
-        className={`fixed top-0 h-21 left-0 right-0 z-[999] transition-all duration-300 bg-[#000000]`}
+        className={`fixed top-0 h-21 left-0 right-0 z-[999] transition-all duration-300 bg-[rgba(255,255,255,0.6)] shadow-md`}
       >
         <div className="max-w-7xl mx-auto p-8">
           <div className="flex items-center justify-between">
@@ -57,8 +57,8 @@ const NavbarTwo = () => {
                   href={item.path}
                   className={`text-md font-medium transition-colors duration-300 py-2 px-4 rounded-lg ${
                     isScrolled
-                      ? "text-white hover:text-[#000000]"
-                      : "text-white font-medium hover:text-[#000000]"
+                      ? "text-dark hover:text-[#000000]"
+                      : "text-dark font-medium hover:text-[#000000]"
                   }`}
                 >
                   {item.name}
@@ -70,8 +70,8 @@ const NavbarTwo = () => {
                   onClick={toggleMenu}
                   className={`text-md font-medium transition-colors duration-300 py-2 px-4 rounded-lg ${
                     isScrolled
-                      ? "text-white hover:text-[#000000]"
-                      : "text-white font-medium hover:text-[#000000]"
+                      ? "text-dark hover:text-[#000000]"
+                      : "text-dark font-medium hover:text-[#000000]"
                   }`}
                 >
                   MENU
@@ -97,14 +97,14 @@ const NavbarTwo = () => {
             {/* Logo */}
             <div className="flex">
               <a href="/">
-                <img src={logo} alt="Logo" className="w-28 h-22" />
+                <img src={logo} alt="Logo" className="w-40 h-22 object-contain" />
               </a>
             </div>
             {/* Action Buttons */}
             <div className="hidden md:flex items-center space-x-4">
               <a
                 href="tel:+918130933899"
-                className="px-4 py-2 rounded-lg transition-colors duration-300 border-2 border-[#ffffff] text-[#ffffff] hover:bg-[#ffffff] hover:text-[#000000]"
+                className="px-4 py-2 rounded-lg transition-colors duration-300 border-2 bg-[#000000] border-[#ffffff] text-[#ffffff] hover:bg-[#ffffff] hover:text-[#000000]"
               >
                 Call Us
               </a>

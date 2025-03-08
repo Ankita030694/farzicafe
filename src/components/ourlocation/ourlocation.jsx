@@ -57,29 +57,20 @@ const OurLocation = () => {
     <div className="w-full mx-auto px-4 bg-black m-10 align-items-center">
       {/* Header Text */}
       <div className="text-center max-w-6xl mx-auto">
+        <h1 className="text-4xl font-bold text-dark">Welcome to Farzi Café</h1>
         <p className="text-lg text-dark pt-12">
-          Regarded as 'the Prince of Indian cuisine', Zorawar Kalra, after the
-          successful exit from his maiden venture credited with introducing one
-          of the most awarded regional cuisine restaurant concepts in India,
-          launched Massive Restaurants Pvt. Ltd. in December 2012. Massive
-          Restaurants, spearheaded by Mr. Kalra and mentored by his illustrious
-          father & Czar of Indian Cuisine – Jiggs Kalra, was established with an
-          aim to develop India's premier brands of restaurants that specialize
-          in targeting all segments of the market, while showcasing the
-          evolution of Indian cuisine and putting Indian food on the global
-          palate permanently. The Company currently operates under critically
-          acclaimed, multi award winning brand verticals of premium Fine-Dining
-          Restaurants with the signature Masala Library by Jiggs Kalra, the
-          Smart-Casual Dining Restaurants with the brand Made in Punjab, the
-          modern Indian bistro concept Farzi Café and modern pan-Asian bistro
-          concept Pa Pa Ya, cuisine agnostic modern 'freestyle' bar & kitchen –
-          KODE, high energy dining concept – MasalaBar, offering a cutting edge,
-          post-modern & stylish bar, for an immersive dining experience; and
-          unlimited grill and brewery concept – BBQ'D. Massive Restaurants
-          raises the bar a not­ch higher with the launch of its brand new Modern
-          Thai Bar & Grill concept BO-TAI. With each new concept and new outlet
-          we move one step closer to our vision and continue to revolutionize
-          Indian food and night life.
+          Focusing on the gourmet diner as well as the youth of India, Farzi
+          Café aims to bring Indian cuisine back “in-Vogue”. “Farzi” can have
+          many connotations, but at Farzi Café, it has just one, “creating an
+          illusion” with its cuisine. Best described as a gourmet experience, it
+          amalgamates traditional global and Indian classics, with Indian
+          influences, contemporary presentations, culinary styles and ambiance.
+          It is a quirky, chic, modern Indian café, where guests enjoy a sensory
+          experience through the finest modern Indian cuisine, with a high
+          energy ambiance. Infusing a generous dose of Indian flavours, Farzi
+          Café presents Indian cuisine where culinary art meets the alchemy of
+          modern presentations and cooking techniques like molecular gastronomy
+          to absorb the guest into the ultimate gastronomic illusion.
         </p>
       </div>
       <LogoSlider />
@@ -121,10 +112,8 @@ const OurLocation = () => {
             </div>
           </div>
         ))} */}
-     
-        
       </div>
-      {/* <Carousel 
+      <Carousel 
       responsive={responsive}
       infinite={true}>
           <div className="about_carousel">
@@ -151,7 +140,7 @@ const OurLocation = () => {
           <div className="about_carousel">
             <img src={about8} alt="" className="grayscale"/>
           </div>
-        </Carousel> */}
+        </Carousel>
     </div>
   );
 };
