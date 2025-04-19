@@ -3,7 +3,8 @@ import logo from "../../assets/logos/roundlogo.svg";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaCross, FaHamburger } from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
-import pdf from "../../assets/BoTai_FoodMenu.pdf";
+import pdf from "../../assets/farzimenu1.pdf";
+import pdf2 from "../../assets/farzimenu2.pdf";
 
 const NavbarTwo = () => {
   const location = useLocation();
@@ -18,9 +19,8 @@ const NavbarTwo = () => {
   ];
 
   const menuItems = [
-    { name: "MENU 1", path: pdf },
-    { name: "MENU 2", path: pdf },
-    { name: "MENU 3", path: pdf },
+    { name: "Drinks Menu", path: pdf },
+    { name: "Food Menu", path: pdf2 },
   ];
 
   useEffect(() => {

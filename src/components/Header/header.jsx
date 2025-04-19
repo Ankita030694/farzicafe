@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./header.css";
-import bannervid from "../../assets/bannervid.mp4";
+import farzihero from "../../assets/farzihero.jpeg";
 
 const Header = () => {
 
   return (
     <div className="relative h-screen">
-      <video
-        src={bannervid}
-        className="w-full h-screen object-cover"
-        autoPlay
-        muted
-      ></video>
+     <img src={farzihero} alt="" />
     </div>
   );
 };
