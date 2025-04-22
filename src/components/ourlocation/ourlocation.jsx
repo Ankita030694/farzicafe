@@ -1,7 +1,7 @@
 import React from "react";
-import location1 from "../../assets/about/location1.png";
-import location2 from "../../assets/about/location2.png";
-import location3 from "../../assets/about/location3.png";
+import location1 from "../../assets/1.svg";
+import location2 from "../../assets/2.svg";
+import location3 from "../../assets/3.svg";
 import about1 from "../../assets/about/1.jpeg";
 import about2 from "../../assets/about/2.jpeg";
 import about3 from "../../assets/about/3.jpeg";
@@ -60,9 +60,9 @@ const OurLocation = () => {
         <h1 className="text-4xl font-bold text-dark">Welcome to Farzi Café</h1>
         <p className="text-lg text-dark pt-12">
           Focusing on the gourmet diner as well as the youth of India, Farzi
-          Café aims to bring Indian cuisine back “in-Vogue”. “Farzi” can have
-          many connotations, but at Farzi Café, it has just one, “creating an
-          illusion” with its cuisine. Best described as a gourmet experience, it
+          Café aims to bring Indian cuisine back "in-Vogue". "Farzi" can have
+          many connotations, but at Farzi Café, it has just one, "creating an
+          illusion" with its cuisine. Best described as a gourmet experience, it
           amalgamates traditional global and Indian classics, with Indian
           influences, contemporary presentations, culinary styles and ambiance.
           It is a quirky, chic, modern Indian café, where guests enjoy a sensory
@@ -73,6 +73,20 @@ const OurLocation = () => {
           to absorb the guest into the ultimate gastronomic illusion.
         </p>
       </div>
+
+      {/* Three Images Row */}
+      <div className="flex flex-col md:flex-row justify-around items-center w-full my-12 px-4 gap-8 md:gap-4">
+        <div className="w-[300px] h-[300px] overflow-hidden">
+          <img src={location1} alt="Location image 1" className="w-full h-full object-cover" />
+        </div>
+        <div className="w-[300px] h-[300px] overflow-hidden">
+          <img src={location2} alt="Location image 2" className="w-full h-full object-cover" />
+        </div>
+        <div className="w-[300px] h-[300px] overflow-hidden">
+          <img src={location3} alt="Location image 3" className="w-full h-full object-cover" />
+        </div>
+      </div>
+      
       <LogoSlider />
 
       {/* Locations Grid */}

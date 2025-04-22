@@ -47,7 +47,7 @@ const NavbarTwo = () => {
       <nav
         className={`fixed top-0 h-21 left-0 right-0 z-[999] transition-all duration-300 bg-[rgba(255,255,255,0.6)] shadow-md`}
       >
-        <div className="max-w-7xl mx-auto p-8">
+        <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
@@ -104,13 +104,13 @@ const NavbarTwo = () => {
             <div className="hidden md:flex items-center space-x-4">
               <a
                 href="tel:+918130933899"
-                className="px-4 py-2 rounded-lg transition-colors duration-300 border-2 bg-[#000000] border-[#ffffff] text-[#ffffff] hover:bg-[#ffffff] hover:text-[#000000]"
+                className="px-4 py-2 rounded-lg transition-colors duration-300 border-2 bg-[#000000] border-[#000000] text-[#ffffff] hover:bg-[#ffffff] hover:text-[#000000]"
               >
                 Call Us
               </a>
               <Link
                 to={"/reservation"}
-                className="px-4 py-2 bg-dark border-2 font-medium rounded-lg text-white bg-[#000000] hover:bg-white hover:text-[#000000] hover:border-2 hover:border-[#000000]"
+                className="px-4 py-2 bg-dark font-medium rounded-lg text-white bg-[#000000] hover:bg-white hover:text-[#000000] hover:border-2 hover:border-[#000000]"
               >
                 Reservation
               </Link>

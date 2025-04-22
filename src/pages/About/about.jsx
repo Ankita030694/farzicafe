@@ -21,7 +21,7 @@ const About = () => {
                 <img
                   src={aboutheader2}
                   alt="Thai dish presentation"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover grayscale"
                   loading="eager"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60" />
