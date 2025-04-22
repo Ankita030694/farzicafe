@@ -7,7 +7,7 @@ import telephone from "../../assets/telephone.jpeg"
 import vidfar from "../../assets/vidfar.mp4"
 import farziCafe1 from "../../assets/Farzi_Cafe1.mp4"
 import farziCafe2 from "../../assets/Farzi_Cafe2.mp4"
-import farziCafe3 from "../../assets/Farzi_Cafe3.mp4"
+// import farziCafe3 from "../../assets/Farzi_Cafe3.mp4"
 import farziCafe4 from "../../assets/Farzi_Cafe4.mp4"
 
 const OurStory = () => {
@@ -56,7 +56,7 @@ const OurStory = () => {
     }
   };
 
-  const videos = [farziCafe1, farziCafe2, farziCafe3, farziCafe4, vidfar];
+  const videos = [farziCafe1, farziCafe2, farziCafe4, vidfar];
   const [desktopIndex, setDesktopIndex] = useState(0);
   const [mobileIndex, setMobileIndex] = useState(0);
   
@@ -91,16 +91,18 @@ const OurStory = () => {
             {/* Create a combined array with duplicated videos at the end to ensure smooth looping */}
             {[...videos, ...videos, ...videos].slice(0, videos.length + 4).map((video, index) => (
               <div key={index} className="w-1/4 px-1">
-                <video
-                  className="w-full h-auto object-cover rounded-lg"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                >
-                  <source src={video} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                <div className="aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-lg">
+                  <video
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  >
+                    <source src={video} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
               </div>
             ))}
           </div>
@@ -116,16 +118,18 @@ const OurStory = () => {
           >
             {videos.concat(videos.slice(0, 1)).map((video, index) => (
               <div key={index} className="w-full px-1">
-                <video
-                  className="w-full h-auto object-cover rounded-lg"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                >
-                  <source src={video} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                <div className="aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-lg">
+                  <video
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  >
+                    <source src={video} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
               </div>
             ))}
           </div>
