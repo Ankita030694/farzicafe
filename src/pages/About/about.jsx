@@ -14,7 +14,7 @@ const About = () => {
   return (
     <div className="relative">
       <NavbarTwo />  
-      <div className="w-full bg-[#000000]">
+      {/* <div className="w-full bg-[#000000]">
         <div className="">
           <div className="relative">
             <div className="aspect-[16/9] w-full overflow-hidden rounded-2xl">
@@ -28,15 +28,10 @@ const About = () => {
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60" />
               </div>
             </div>
-            
-            {/* <div className="absolute bottom-8 left-0 right-0 flex justify-center">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#ffffff] tracking-wider">
-                ABOUT US
-              </h1>
-            </div> */}
           </div>
         </div>
-      </div>
+      </div> */}
+      <div style={{marginTop: '100px'}}></div>
 
       <OurLocation />
       {/* <AboutGallery /> */}

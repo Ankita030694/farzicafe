@@ -51,7 +51,10 @@ const Home = () => {
           <Header /> 
           <OurStory /> 
           <BoTaiGallery />
-          <ReservationBanner />
+          {/* <ReservationBanner /> */}
+          <div className="mt-5">
+            
+          </div>
           <Reviews />
           <Footer />
           {/* Sticky Buttons */}
