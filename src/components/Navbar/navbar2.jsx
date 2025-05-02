@@ -45,7 +45,9 @@ const NavbarTwo = () => {
     <div className="relative">
       {/* Main Navbar */}
       <nav
-        className={`fixed top-0 h-21 left-0 right-0 z-[999] transition-all duration-300 bg-[rgba(255,255,255,0.6)] shadow-md`}
+        className={`fixed top-0 h-21 left-0 right-0 z-[999] transition-all duration-300 ${
+          isScrolled ? 'bg-white' : 'bg-[rgba(255,255,255,0.3)]'
+        } shadow-md`}
       >
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between">

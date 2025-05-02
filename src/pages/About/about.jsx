@@ -7,7 +7,8 @@ import NavbarTwo from '../../components/Navbar/navbar2';
 import LogoSlider from '../../components/LogoSlider/logoslider';
 import Navbar from '../../components/Navbar/navbar';
 import aboutheader from '../../assets/Swan2147.jpg';
-import aboutheader2 from '../../assets/aboutbanner.jpeg';
+import aboutheader2 from '../../assets/heroabout.svg';
+import farzitext from '../../assets/about1.svg'
 
 const About = () => {
   return (
@@ -21,7 +22,7 @@ const About = () => {
                 <img
                   src={aboutheader2}
                   alt="Thai dish presentation"
-                  className="h-full w-full object-cover grayscale"
+                  className="h-full w-full object-contain"
                   loading="eager"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60" />

@@ -71,17 +71,32 @@ const ContactUs = () => {
             <div className='shadow-lg bg-white p-8 rounded-lg border-2 border-black'>
               <h1 className="text-4xl font-bold text-black mb-6">Contact Us</h1>
               <p className="text-gray-900 mb-6">
-              ward no 1, Kharsra No 1501, 1st Floor, Kalka Das Marg, Mehrauli, New Delhi, Delhi 110030
+              Ground Cyber Hub, 7-8, DLF Cyber City, Gurugram, Haryana 122016
               </p>
-              <div className="space-y-4">
-                <p className='text-gray-900'>For franchisee enquiries contact Business Development and Franchising:</p>
+              
+              {/* General Contact Information */}
+              <div className="">
                 <div className="flex items-center space-x-3">
-                  <span className="text-black">📧</span>
-                  <span className="text-gray-900">franchising@massiverestaurants.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <span className="text-black">📞</span>
-                  <span className="text-gray-900">+91 81309 33899</span>
+                  <span className="text-gray-900">+91 88006 90419</span>
+                </div>
+              </div>
+              
+              {/* Franchise Enquiries Section */}
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <h3 className="text-2xl font-bold text-black mb-4">Franchise Enquiries</h3>
+                <p className='text-gray-900 mb-4'>For franchisee enquiries contact Business Development and Franchising:</p>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <span className="text-black">📧</span>
+                    <span className="text-gray-900">franchising@massiverestaurants.com</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <span className="text-black">📞</span>
+                    <span className="text-gray-900">+91 88001 98091</span>
+                  </div>
                 </div>
               </div>
             </div>

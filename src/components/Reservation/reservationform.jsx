@@ -5,7 +5,7 @@ import loadingAnimation from "../../assets/loader-old.json";
 import Lottie from "lottie-react";
 import "./reservation.css";
 import { useNavigate } from "react-router-dom";
-import reservationbg from "../../assets/reservationbg.jpg";
+import reservationbg from "../../assets/reservatiobg.jpg";
 
 const ReservationForm = () => {
   const navigate = useNavigate();

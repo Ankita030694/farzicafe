@@ -13,6 +13,7 @@ import about8 from "../../assets/about/8.jpeg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import LogoSlider from "../LogoSlider/logoslider";
+import farzitext from '../../assets/about1.svg'
 const locations = [
   {
     city: "GOA",
@@ -76,18 +77,11 @@ const OurLocation = () => {
 
       {/* Three Images Row */}
       <div className="flex flex-col md:flex-row justify-around items-center w-full my-12 px-4 gap-8 md:gap-4">
-        <div className="w-[300px] h-[300px] overflow-hidden">
-          <img src={location1} alt="Location image 1" className="w-full h-full object-cover" />
-        </div>
-        <div className="w-[300px] h-[300px] overflow-hidden">
-          <img src={location2} alt="Location image 2" className="w-full h-full object-cover" />
-        </div>
-        <div className="w-[300px] h-[300px] overflow-hidden">
-          <img src={location3} alt="Location image 3" className="w-full h-full object-cover" />
+        <div className="  overflow-hidden">
+          <img src={farzitext} alt="Location image 1" className="w-full h-full object-cover" />
         </div>
       </div>
       
-      <LogoSlider />
 
       {/* Locations Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-8 mb-10 mt-10">
@@ -155,6 +149,8 @@ const OurLocation = () => {
             <img src={about8} alt="" className="grayscale"/>
           </div>
         </Carousel>
+      <LogoSlider />
+
     </div>
   );
 };
