@@ -6,7 +6,7 @@ import { parsePhoneNumberFromString } from "libphonenumber-js";
 function ReservationDetails() {
   const [reservations, setReservations] = useState([]);
   const [filteredReservations, setFilteredReservations] = useState([]);
-  const [outlets, setOutlets] = useState([]);
+  const [outlets, setOutlets] = useState(["All", "Oberoi Mall, Mumbai", "Connought Place", "Cyber Hub"]);
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedOutlet, setSelectedOutlet] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
@@ -20,10 +20,6 @@ function ReservationDetails() {
     const data = await FirestoreService.getAll("Reservations");
     setReservations(data);
     setFilteredReservations(data);
-
-    // Extract unique outlets
-    const outletSet = new Set(data.map((res) => res.outlet.title));
-    setOutlets(["All", ...outletSet]); // Add 'All' for showing all reservations
   }
 
   const downloadCSV = () => {
