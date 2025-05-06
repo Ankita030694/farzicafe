@@ -100,11 +100,21 @@ const ReservationForm = () => {
     const outletsData = await FirestoreService.getAll("Constraints");
     setOutlets(outletsData);
     setLoading(false);
+    
     if (outletsData.length > 0) {
-      const sortedTimeSlots = outletsData[0].timeSlots.sort((a, b) => {
+      // Find specific outlets by name if they exist
+      const cyberHub = outletsData.find(outlet => 
+        outlet.outlet.includes("Cyber Hub"));
+      const oberoi = outletsData.find(outlet => 
+        outlet.outlet.includes("Oberoi Mall") || outlet.outlet.includes("Mumbai"));
+      
+      // Default to the first outlet if specific ones aren't found
+      const defaultOutlet = cyberHub || oberoi || outletsData[0];
+      const sortedTimeSlots = defaultOutlet.timeSlots.sort((a, b) => {
         return parseTime(a) - parseTime(b);
       });
-      setSelectedOutlet(outletsData[0]);
+      
+      setSelectedOutlet(defaultOutlet);
       setTimeSlots(sortedTimeSlots);
     }
   }
@@ -526,7 +536,7 @@ const ReservationForm = () => {
                 onClick={() => filterTimeSlots("lunch")}
                 className={`p-2 rounded-md transition-colors duration-200 md:w-48 ${
                   formData.timing === "lunch"
-                    ? "bg-black font-semibold text-white"
+                    ? "bg-[#000000] font-semibold text-white"
                     : "bg-white hover:bg-gray-200"
                 }`}
               >
@@ -540,7 +550,7 @@ const ReservationForm = () => {
                 onClick={() => filterTimeSlots("dinner")}
                 className={`p-2 rounded-md transition-colors duration-200 md:w-48 ${
                   formData.timing === "dinner"
-                    ? "bg-black font-semibold text-white"
+                    ? "bg-[#000000] font-semibold text-white"
                     : "bg-white hover:bg-gray-200"
                 }`}
               >
@@ -563,7 +573,7 @@ const ReservationForm = () => {
                     onClick={() => handleInputChange("timeSlot", slot)}
                     className={`p-2 rounded-md transition-colors duration-200 ${
                       formData.timeSlot === slot
-                        ? "bg-black font-semibold text-white"
+                        ? "bg-[#000000] font-semibold text-white"
                         : "bg-white hover:bg-gray-200"
                     }`}
                   >
