@@ -5,10 +5,10 @@ import { collection, addDoc, Timestamp } from "firebase/firestore";
 import Rating from "react-rating-stars-component";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import logo from "../../../assets/logo1.png";
+import logo from "../../../assets/logos/roundlogo.svg";
 const AddReview = () => {
   const { register, handleSubmit, reset, setValue } = useForm();
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false); 
   const [rating, setRating] = useState(0); // State to hold rating
 
   const onSubmit = async (data) => {
