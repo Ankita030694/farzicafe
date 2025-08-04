@@ -5,10 +5,8 @@ import location from "../../assets/about/ourstory.jpg"
 import ourstory from "../../assets/ourstory.mp4"
 import telephone from "../../assets/telephone.jpeg"
 import vidfar from "../../assets/vidfar.mp4"
-import farziCafe1 from "../../assets/Farzi_Cafe1.mp4"
-import farziCafe2 from "../../assets/Farzi_Cafe2.mp4"
-// import farziCafe3 from "../../assets/Farzi_Cafe3.mp4"
-import farziCafe4 from "../../assets/Farzi_Cafe4.mp4"
+
+
 
 const OurStory = () => {
   const titleVariants = {
@@ -56,85 +54,16 @@ const OurStory = () => {
     }
   };
 
-  const videos = [farziCafe1, farziCafe2, farziCafe4, vidfar];
+
   const [desktopIndex, setDesktopIndex] = useState(0);
   const [mobileIndex, setMobileIndex] = useState(0);
   
-  useEffect(() => {
-    const desktopInterval = setInterval(() => {
-      setDesktopIndex((prevIndex) => (prevIndex + 1) % videos.length);
-    }, 3000);
-    
-    const mobileInterval = setInterval(() => {
-      setMobileIndex((prevIndex) => (prevIndex + 1) % videos.length);
-    }, 4000); // Slightly longer interval for mobile
-    
-    return () => {
-      clearInterval(desktopInterval);
-      clearInterval(mobileInterval);
-    };
-  }, [videos.length]);
+
 
   return (
     <div className="w-full py-16 px-8 bg-[#ffffff] relative">
       
-      {/* Video Carousel - desktop: shows 4, scrolls 1 at a time; mobile: shows 1, scrolls 1 */}
-      <div className="max-w-7xl mx-auto mb-12 overflow-hidden">
-        <div className="hidden md:block"> {/* Desktop view - hidden on mobile */}
-          <div 
-            className="flex transition-transform duration-1000 ease-in-out" 
-            style={{ 
-              transform: `translateX(-${desktopIndex * 10}%)`,
-              width: `${videos.length * 50}%`
-            }}
-          >
-            {/* Create a combined array with duplicated videos at the end to ensure smooth looping */}
-            {[...videos, ...videos, ...videos].slice(0, videos.length + 4).map((video, index) => (
-              <div key={index} className="w-1/4 px-1">
-                <div className="aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-lg">
-                  <video
-                    className="w-full h-full object-cover"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                  >
-                    <source src={video} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        
-        <div className="block md:hidden"> {/* Mobile view - hidden on desktop */}
-          <div 
-            className="flex transition-transform duration-1000 ease-in-out" 
-            style={{ 
-              transform: `translateX(-${mobileIndex * 15}%)`,
-              width: `${videos.length * 80}%`
-            }}
-          >
-            {videos.concat(videos.slice(0, 1)).map((video, index) => (
-              <div key={index} className="w-full px-1">
-                <div className="aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-lg">
-                  <video
-                    className="w-full h-full object-cover"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                  >
-                    <source src={video} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+     
    
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 relative z-10">
         {/* Left side - Title */}
