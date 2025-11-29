@@ -100,45 +100,65 @@ const OurStory = () => {
             viewport={{ once: true, margin: "-100px" }}
             variants={contentVariants}
           >
-           Bo Tai is a modern Thai bar and grill concept that seamlessly blends cosmopolitan Italian design with vibrant Thai elements. With its chic yet cozy ambiance, Bo Tai is crafted for the young, stylish, and socially savvy crowd. The name itself, a playful pun on "bow-tie," reflects the sophistication and bold flavors of its Oriental-inspired cuisine. Combining contemporary Thai and Italian influences, Bo Tai offers a unique culinary experience set against an international backdrop that celebrates both style and flavor.
+          Farzi Café is a popular modern-Indian bistro known for its creative take on traditional Indian cuisine. The brand reimagines classic dishes by blending them with global flavours, inventive techniques, and contemporary presentation. Farzi Café focuses on giving diners a fun, experimental, and memorable experience by presenting familiar Indian dishes in a stylish, gourmet way.
+
+Its menu features innovative fusion dishes such as Dal Chawal Arancini, Tempura Fried Prawns, Vada Pav Farzified, and unique chaats with modern twists. The restaurant is also known for its artistic plating and occasional use of molecular gastronomy, making the dining experience both visually appealing and flavour-forward. Along with food, Farzi Café offers a vibrant selection of cocktails and beverages crafted to match its bold and modern culinary style.
           </motion.p>
 
           {/* Stats */}
           <div className="flex flex-wrap gap-6">
-            {/* Outlets stat */}
+            {/* Modern Indian Fusion */}
             <motion.div 
-              className="flex-1 min-w-[200px] rounded-2xl p-6 border-2 border-[#000000]"
+              whileHover={{
+                scale: 1.06,
+                boxShadow: "0px 8px 24px rgba(0,0,0,0.10)",
+                borderColor: "#e07e90"
+              }}
+              className="flex-1 min-w-[200px] rounded-2xl p-6 border-2 border-[#000000] transition-all duration-200 cursor-pointer"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
               variants={statCardVariants}
             >
-              {/* <div className="text-4xl font-bold mb-2">Handmade Syrups</div> */}
-              <div className="text-xl text-center text-[#000000] border-[#000000]">Handmade Syrups</div>
+              <div className="text-xl text-center text-[#000000]">
+                Modern Indian Fusion
+              </div>
             </motion.div>
 
-            {/* Awards stat */}
+            {/* Creative Presentation */}
             <motion.div 
-              className="flex-1 min-w-[200px] rounded-2xl p-6 border-2 border-[#000000]"
+              whileHover={{
+                scale: 1.06,
+                boxShadow: "0px 8px 24px rgba(0,0,0,0.10)",
+                borderColor: "#e07e90"
+              }}
+              className="flex-1 min-w-[200px] rounded-2xl p-6 border-2 border-[#000000] transition-all duration-200 cursor-pointer"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
               variants={statCardVariants}
             >
-              {/* <div className="text-4xl font-bold mb-2">Live Sushi Bar</div> */}
-              <div className="text-xl text-center text-[#000000] border-[#e07e90]" >Live Sushi Bar</div>
+              <div className="text-xl text-center text-[#000000]">
+                Creative Presentation
+              </div>
             </motion.div>
 
-            {/* Additional Awards stat */}
+            {/* Vibrant Ambience */}
             <motion.div 
-              className="flex-1 min-w-[200px] rounded-2xl p-6 border-2 border-[#000000]"
+              whileHover={{
+                scale: 1.06,
+                boxShadow: "0px 8px 24px rgba(0,0,0,0.10)",
+                borderColor: "#e07e90"
+              }}
+              className="flex-1 min-w-[200px] rounded-2xl p-6 border-2 border-[#000000] transition-all duration-200 cursor-pointer"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
               variants={statCardVariants}
             >
-              {/* <div className="text-4xl font-bold mb-2">Infinity View</div> */}
-              <div className="text-xl text-center text-[#000000] border-[#e07e90]">Infinity View</div>
+              <div className="text-xl text-center text-[#000000]">
+                Vibrant Ambience
+              </div>
             </motion.div>
           </div>
         </div>

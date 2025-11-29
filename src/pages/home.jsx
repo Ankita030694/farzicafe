@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar/navbar";
 import Header from "../components/Header/header";
 import OurStory from "../components/OurStory/ourstory";
-import Reviews from "../components/Reviews/reviews";
+// import Reviews from "../components/Reviews/reviews";
+import CTA from "../components/CTA/cta";
 import Footer from "../components/Footer/footer";
 import { AnimatePresence, motion } from "framer-motion";
 import ReservationBanner from "../components/Reservation/tablereservation";
@@ -55,7 +56,8 @@ const Home = () => {
           <div className="mt-5">
             
           </div>
-          <Reviews />
+          {/* <Reviews /> */}
+          <CTA />
           <Footer />
           {/* Sticky Buttons */}
           <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 p-1 flex justify-around bg-[#000000] shadow-lg border-2 border-[#ffffff] rounded-lg">
