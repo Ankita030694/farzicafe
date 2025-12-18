@@ -80,7 +80,7 @@ const ContactUs = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <span className="text-black">📞</span>
-                  <span className="text-gray-900">+91 88006 90419</span>
+                  <span className="text-gray-900">+91 9599889701</span>
                 </div>
               </div>
               
@@ -95,7 +95,7 @@ const ContactUs = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <span className="text-black">📞</span>
-                    <span className="text-gray-900">+91 88001 98091</span>
+                    <span className="text-gray-900">+91 9599889701</span>
                   </div>
                 </div>
               </div>

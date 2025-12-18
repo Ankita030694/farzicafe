@@ -105,7 +105,7 @@ const NavbarTwo = () => {
             {/* Action Buttons */}
             <div className="hidden md:flex items-center space-x-4">
               <a
-                href="tel:+918130933899"
+                href="tel:+919599889701"
                 className="px-4 py-2 rounded-lg transition-colors duration-300 border-2 bg-[#000000] border-[#000000] text-[#ffffff] hover:bg-[#ffffff] hover:text-[#000000]"
               >
                 Call Us
@@ -169,7 +169,7 @@ const NavbarTwo = () => {
               </a>
             ))}
             <div className="mt-6 space-y-4">
-              <a href="tel:+919870587770">
+              <a href="tel:+919599889701">
                 <button className="w-full px-4 py-2 bg-white text-dark rounded-lg border-2 border-[#000000]">
                   Call Us
                 </button>

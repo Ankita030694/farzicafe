@@ -60,7 +60,7 @@ const Navbar = () => {
           {/* Action Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="tel:+919870587770"
+              href="tel:+919599889701"
               className={`px-4 py-2 rounded-lg transition-colors duration-300 ${
                 isScrolled
                   ? "px-6 font-medium border-2 rounded-full border-orange-100 text-orange-100 hover:bg-orange-100 hover:text-brown "
@@ -129,7 +129,7 @@ const Navbar = () => {
             ))}
             <div className="mt-6 space-y-4">
               <a
-                href="tel:+919870587770"
+                href="tel:+919599889701"
                 className="w-full px-4 py-2 bg-gray-100 text-gray-900 rounded-lg"
               >
                 call us
