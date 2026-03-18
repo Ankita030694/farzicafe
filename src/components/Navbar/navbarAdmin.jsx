@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import logo from '../../assets/logos/roundlogo.svg' 
 import { Link, useNavigate } from 'react-router-dom';
+import FireAuthService from '../../services/fireauth-service';
+
 const AdminNavbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -25,10 +27,15 @@ const AdminNavbar = () => {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
-  const logOut = () => {
-    // Implement logout logic here
-    navi('/login');
-    console.log('Logged out');
+
+  const logOut = async () => {
+    try {
+      await FireAuthService.logout();
+      navi('/login');
+      console.log('Logged out');
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
   };
   return (
     <div className="relative">

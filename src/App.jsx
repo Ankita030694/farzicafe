@@ -13,20 +13,22 @@ import './App.css'
 import Thankyou from './components/Thankyou/Thankyou';
 import AddReview from './pages/Admin/AddReview/AddReview';
 import ReviewDetails from './pages/Admin/Reviews/ReviewDetails';
+import ProtectedRoute from './components/ProtectedRoute';
+
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path="/admin/reviews" element={<ReviewDetails/>} />
+          <Route path="/admin/reviews" element={<ProtectedRoute><ReviewDetails/></ProtectedRoute>} />
           <Route path="/about" element={<About/>} />
           <Route path="/contact" element={<ContactUs/>} />
           <Route path="/reservation" element={<Reservation/>} />
-          <Route path="/admin" element={<AdminHome/>} />
-          <Route path="/admin/reservation" element={<ReservationDetails/>} />
-          <Route path= "/admin/contact"  element={<AdminContact/>} />
-          <Route path= "/admin/add/outlet"  element={<AddOutlet/>} />
+          <Route path="/admin" element={<ProtectedRoute><AdminHome/></ProtectedRoute>} />
+          <Route path="/admin/reservation" element={<ProtectedRoute><ReservationDetails/></ProtectedRoute>} />
+          <Route path="/admin/contact" element={<ProtectedRoute><AdminContact/></ProtectedRoute>} />
+          <Route path="/admin/add/outlet" element={<ProtectedRoute><AddOutlet/></ProtectedRoute>} />
           <Route path= "/login"  element={<Login/>} />
           <Route path= "/thanks"  element={<Thankyou/>} />
           <Route path= "/addReview"  element={<AddReview/>} />

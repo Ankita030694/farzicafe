@@ -64,6 +64,15 @@ function AddOutlet() {
     GetOutlets(); // Refresh outlets
   }
 
+  // Delete an outlet
+  async function handleDeleteOutlet(id) {
+    if (window.confirm("Are you sure you want to delete this outlet?")) {
+      await FirestoreService.delete("Constraints", id);
+      alert("Outlet deleted successfully!");
+      GetOutlets(); // Refresh outlets
+    }
+  }
+
   // Add a new time slot input field
   const handleAddTimeSlot = () => setNewTimeSlots([...newTimeSlots, ""]);
 
@@ -120,12 +129,20 @@ function AddOutlet() {
                         </span>
                       ))}
                     </p>
-                    <button
-                      onClick={() => openUpdateModal(outlet)}
-                      className="px-4 py-2 bg-white text-[#000000] rounded-md mt-2 hover:bg-gray-200"
-                    >
-                      Update
-                    </button>
+                    <div className="flex gap-2">
+                        <button
+                          onClick={() => openUpdateModal(outlet)}
+                          className="px-4 py-2 bg-white text-[#000000] rounded-md mt-2 hover:bg-gray-200"
+                        >
+                          Update
+                        </button>
+                        <button
+                          onClick={() => handleDeleteOutlet(outlet.id)}
+                          className="px-4 py-2 bg-red-600 text-white rounded-md mt-2 hover:bg-red-700"
+                        >
+                          Delete
+                        </button>
+                    </div>
                   </div>
                 ))
               ) : (
