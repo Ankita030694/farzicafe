@@ -97,25 +97,37 @@ const ReservationForm = () => {
   };
 
   async function getOutlets() {
-    const outletsData = await FirestoreService.getAll("Constraints");
-    setOutlets(outletsData);
-    setLoading(false);
-    
-    if (outletsData.length > 0) {
-      // Find specific outlets by name if they exist
-      const cyberHub = outletsData.find(outlet => 
-        outlet.outlet.includes("Cyber Hub"));
-      const oberoi = outletsData.find(outlet => 
-        outlet.outlet.includes("Oberoi Mall") || outlet.outlet.includes("Mumbai"));
+    try {
+      setLoading(true);
+      const outletsData = await FirestoreService.getAll("Constraints");
+      setOutlets(outletsData);
       
-      // Default to the first outlet if specific ones aren't found
-      const defaultOutlet = cyberHub || oberoi || outletsData[0];
-      const sortedTimeSlots = defaultOutlet.timeSlots.sort((a, b) => {
-        return parseTime(a) - parseTime(b);
-      });
-      
-      setSelectedOutlet(defaultOutlet);
-      setTimeSlots(sortedTimeSlots);
+      if (outletsData && outletsData.length > 0) {
+        // Find specific outlets by name if they exist
+        const cyberHub = outletsData.find(outlet => 
+          outlet.outlet && outlet.outlet.includes("Cyber Hub"));
+        const oberoi = outletsData.find(outlet => 
+          outlet.outlet && (outlet.outlet.includes("Oberoi Mall") || outlet.outlet.includes("Mumbai")));
+        
+        // Default to the first outlet if specific ones aren't found
+        const defaultOutlet = cyberHub || oberoi || outletsData[0];
+        
+        if (defaultOutlet && defaultOutlet.timeSlots) {
+          const sortedTimeSlots = [...defaultOutlet.timeSlots].sort((a, b) => {
+            return parseTime(a) - parseTime(b);
+          });
+          
+          setSelectedOutlet(defaultOutlet);
+          setTimeSlots(sortedTimeSlots);
+        }
+      } else {
+        console.warn("No outlets found in database.");
+      }
+    } catch (error) {
+      console.error("Error fetching outlets from Firestore:", error);
+      // Fallback: If it's a permission error, at least stop the loading state
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -206,8 +218,7 @@ const ReservationForm = () => {
       };
 
       await FirestoreService.add("Reservations", reservation);
-      navigate("/thanks");
-
+      
       // Reset form fields (except outlet)
       setFormData({
         ...formData,
@@ -219,12 +230,17 @@ const ReservationForm = () => {
         timeSlot: "",
         timing: "",
       });
+
+      // Reset loading before navigation
+      setLoading(false);
+      navigate("/thanks");
     } catch (error) {
+      console.error("Submission error:", error);
       alert(
         "An error occurred while submitting your reservation. Please try again."
       );
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   // Update formData and clear any error for the field on change.
